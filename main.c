@@ -18,43 +18,51 @@ int main(int argc, char *argv[]) {
 	 
 	 FILE* fichier= NULL;
 	 
+	fichier = fopen("etudiant.txt", "wb");
+	
+		fwrite ("hfgsjhfgsdjhfgsdj  ", sizeof tableau, sizeof *tableau, fichier);
 
-
+	if (!fichier) 
+	{
+    	return EXIT_FAILURE;
+    }
    
 	for ( i=0; i< 100; i++)
 	{
 		(void)printf(" ");
 		(void)printf("nom de etudiant : ");
-		
-		
-		
-			scanf("%[^\n]", &nom_etudiant);
+
+		scanf("%[^\n]", &nom_etudiant);
+		fwrite ( &nom_etudiant, sizeof tableau, sizeof *tableau, fichier);
+        
 		
 		for ( j=0; j< 5; j++)
 		
 		{
 				(void)printf("matiere[%d] \n",j+1);
 			
+			fwrite ("matiere", sizeof tableau, sizeof *tableau, fichier);
+      
 				
 			for ( k=0; k< 2; k++)
 			
 			{			
 		
+//		fwrite ("hfgsjhfgsdjhfgsdj  \s", sizeof tab, sizeof *tab, fichier);
+//        fwrite ("  marcosmedenou", sizeof tab, sizeof *tab, fichier);
+//        fclose (fichier);
 //				(void)printf("etudiant [%d] matiere [%d] note  [%d] \n", i, j, k);
 			
 				(void)printf("note[%d] : ", k+1);
 				scanf("%d", &note);
 				
-				fichier = fopen("etudiant.txt", "w");
-				
-				if (fichier != NULL)
-			    {
+			
 			        // On peut lire et �crire dans le fichier
-			        fputc(2 , fichier); 
-			     
+//			       	fwrite (&note, sizeof tableau, sizeof *tableau, fichier);
 			        
 			        fclose(fichier);
-			    }
+			    
+			    return EXIT_SUCCESS;
 			    
 			
 			
