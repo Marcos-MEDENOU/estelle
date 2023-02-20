@@ -6,6 +6,7 @@
 int main(int argc, char *argv[]) {
 	 
 	
+	
 	int tableau[100][5][2];
 	
 	int i,j,k ;
@@ -47,7 +48,7 @@ int main(int argc, char *argv[]) {
 				
 				if (fichier != NULL)
 			    {
-			        // On peut lire et écrire dans le fichier
+			        // On peut lire et ï¿½crire dans le fichier
 			        fputc(2 , fichier); 
 			     
 			        
