@@ -7,6 +7,7 @@ int main(int argc, char *argv[]) {
 	 
 	
 	
+	
 	int tableau[100][5][2];
 	
 	int i,j,k ;
